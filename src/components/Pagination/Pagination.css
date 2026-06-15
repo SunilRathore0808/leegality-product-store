@@ -5,6 +5,7 @@
     gap: 8px;
     margin-top: 32px;
     padding-bottom: 8px;
+    flex-wrap: wrap;
   }
   
   .arrow-btn {
@@ -33,6 +34,8 @@
   .numeric-pages-container {
     display: flex;
     gap: 6px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   
   .page-num-btn {
@@ -61,4 +64,16 @@
     border-color: #0084ff;
     color: #ffffff;
     font-weight: 600;
+  }
+
+  @media (max-width: 480px) {
+    .page-num-btn {
+      width: 32px;
+      height: 32px;
+      font-size: 12px;
+    }
+    .arrow-btn {
+      padding: 6px 10px;
+      font-size: 12px;
+    }
   }
