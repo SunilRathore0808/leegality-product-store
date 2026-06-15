@@ -1,0 +1,153 @@
+.sidebar-filters {
+    width: 240px;
+    min-width: 240px;
+    background-color: #ededed; 
+    border-right: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    gap: 20px;
+  }
+
+  .sidebar-search-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .sidebar-search-icon {
+    position: absolute;
+    left: 10px;
+    color: #a0aec0;
+    font-size: 13px;
+  }
+  
+  .sidebar-search-input {
+    width: 100%;
+    padding: 8px 12px 8px 32px;
+    border-radius: 4px;
+    border: 1px solid #cbd5e0;
+    background-color: #ffffff;
+    font-size: 13px;
+    outline: none;
+  }
+  
+  .filters-main-title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #2d3748;
+    margin: 0;
+  }
+  
+  .filter-title-icon {
+    font-size: 14px;
+  }
+  
+  /* Sections Hierarchy */
+  .filter-section {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #cbd5e0; 
+    padding-top: 16px;
+    margin-top: 5px;
+  }
+  
+  .filter-section-heading {
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a202c;
+    margin-bottom: 12px;
+  }
+  
+  /* Checkbox Blocks */
+  .filter-list-box {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    height: 160px;          
+    overflow-y: scroll;     
+    padding-right: 8px;
+    margin-bottom: 5px;
+  }
+
+  .filter-list-box::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* 2. The background track line (Transparent/Light gray background) */
+  .filter-list-box::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+  }
+  
+  /* 3. The draggable thumb handle (Darker grey pill shape from the screenshot) */
+  .filter-list-box::-webkit-scrollbar-thumb {
+    background: #a0aec0;   
+    border-radius: 4px;     
+    border: 1px solid #f1f1f1; 
+  }
+  
+  /* 4. Darkens slightly when hover focus actions happen */
+  .filter-list-box::-webkit-scrollbar-thumb:hover {
+    background: #718096;
+  }
+  
+  .filter-checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+  }
+  
+  .filter-checkbox-row input[type="checkbox"] {
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    accent-color: #0084ff; 
+  }
+  
+  .checkbox-custom-label {
+    font-size: 13px;
+    color: #4a5568;
+    font-weight: 400;
+  }
+  
+  /* Numeric Inline Fields */
+  .price-inputs-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .price-field {
+    width: 50%;
+    padding: 6px 10px;
+    border: 1px solid #cbd5e0;
+    border-radius: 4px;
+    background-color: #ffffff;
+    font-size: 13px;
+    outline: none;
+    color: #2d3748;
+  }
+  
+  .apply-filters-btn {
+    background-color: #0084ff;
+    color: #ffffff;
+    border: none;
+    padding: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.15s;
+  }
+  
+  .apply-filters-btn:hover {
+    background-color: #006bce;
+  }

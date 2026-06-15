@@ -1,0 +1,251 @@
+.detail-layout-container {
+    display: flex;
+    background-color: #ffffff;
+    flex: 1;
+    width: 100%;
+    padding: 32px;
+    gap: 48px;
+  }
+  
+  .detail-left-column {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+  
+  .detail-back-btn {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    color: #4a5568;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+  }
+  
+  .detail-back-btn:hover {
+    background-color: #f7fafc;
+    border-color: #cbd5e0;
+  }
+  
+  .detail-image-box {
+    width: 100%;
+    height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 8px;
+  }
+  
+  .detail-image-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  .detail-mock-pagination {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    margin-top: auto; 
+  }
+  
+  .mock-pag-btn {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    color: #4a5568;
+    height: 32px;
+    padding: 0 10px;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .mock-pag-btn.active {
+    background-color: #0084ff;
+    border-color: #0084ff;
+    color: #ffffff;
+  }
+  
+  .mock-pag-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .detail-right-column {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .detail-main-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #1a202c;
+    margin: 0 0 12px 0;
+  }
+  
+  .detail-pricing-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .detail-price-lbl {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a202c;
+  }
+  
+  .detail-rating-stars-inline {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .detail-star-icon {
+    font-size: 15px;
+  }
+  
+  .detail-rating-num {
+    font-size: 13px;
+    color: #718096;
+    margin-left: 2px;
+  }
+  
+  .detail-metadata-block {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 24px;
+  }
+  
+  .detail-metadata-block p {
+    font-size: 14px;
+    color: #4a5568;
+    margin: 0;
+  }
+  
+  .detail-metadata-block strong {
+    color: #1a202c;
+    font-weight: 600;
+  }
+  
+  .detail-section-block {
+    border-top: 1px solid #e2e8f0;
+    padding: 20px 0;
+  }
+  
+  .detail-section-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a202c;
+    margin: 0 0 12px 0;
+  }
+  
+  .detail-description-text {
+    font-size: 14px;
+    color: #4a5568;
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  .detail-reviews-list-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  
+  .review-item-card {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .review-header-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .reviewer-name-txt {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1a202c;
+  }
+  
+  .review-stars-row {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+  
+  .review-rating-subtext {
+    font-size: 12px;
+    color: #718096;
+    margin-left: 4px;
+  }
+  
+  .reviewer-comment-content {
+    font-size: 14px;
+    color: #4a5568;
+    margin: 0;
+    line-height: 1.4;
+  }
+  
+  @media (max-width: 868px) {
+    .detail-layout-container {
+      flex-direction: column;
+      gap: 32px;
+    }
+    .detail-left-column, .detail-right-column {
+      width: 100%;
+    }
+    .detail-image-box {
+      height: 300px;
+    }
+  }
+
+.half-star-wrapper {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    width: 14px; 
+    height: 14px;
+  }
+  
+  .background-empty-star {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+  }
+  
+  .half-star-fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%; 
+    height: 100%;
+    overflow: hidden;
+    z-index: 2;
+  }
+  
+  .foreground-filled-star {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
