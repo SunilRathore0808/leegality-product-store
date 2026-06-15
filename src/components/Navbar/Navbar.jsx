@@ -1,7 +1,7 @@
-import { IoIosSearch } from "react-icons/io";
 import { FaShoppingCart } from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
 import "./Navbar.css";
+import { IoIosSearch } from "react-icons/io";
 
 const Navbar = ({ onToggleSidebar }) => {
   return (

@@ -6,6 +6,7 @@ import {
   getProductsByCategory,
 } from "../../api/productApi";
 
+import { IoIosSearch } from "react-icons/io";
 import Navbar from "../../components/Navbar/Navbar";
 import SidebarFilters from "../../components/SidebarFilters/SidebarFilters";
 import ProductCard from "../../components/ProductCard/ProductCard";
@@ -21,6 +22,8 @@ const ProductListingPage = () => {
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -116,6 +119,12 @@ const ProductListingPage = () => {
     return matchesMinPrice && matchesMaxPrice && matchesBrand;
   });
 
+  const isAnyFilterApplied =
+    selectedCategory !== "" ||
+    minPrice !== "" ||
+    maxPrice !== "" ||
+    selectedBrands.length > 0;
+
   const indexOfLastProduct = currentPage * PRODUCTS_PER_PAGE;
   const indexOfFirstProduct = indexOfLastProduct - PRODUCTS_PER_PAGE;
   const currentProductsToDisplay = filteredProducts.slice(
@@ -130,22 +139,33 @@ const ProductListingPage = () => {
 
   return (
     <div className="app-window-frame">
-      <Navbar />
+      <Navbar onToggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)} />
 
       <div className="main-layout-container">
-        <SidebarFilters
-          categories={categories}
-          selectedCategory={selectedCategory}
-          setSelectedCategory={setSelectedCategory}
-          minPrice={minPrice}
-          maxPrice={maxPrice}
-          setPriceRange={setPriceRange}
-          brands={uniqueBrands}
-          selectedBrands={selectedBrands}
-          setSelectedBrands={setSelectedBrands}
-        />
+        {isSidebarOpen && (
+          <SidebarFilters
+            categories={categories}
+            selectedCategory={selectedCategory}
+            setSelectedCategory={setSelectedCategory}
+            minPrice={minPrice}
+            maxPrice={maxPrice}
+            setPriceRange={setPriceRange}
+            brands={uniqueBrands}
+            selectedBrands={selectedBrands}
+            setSelectedBrands={setSelectedBrands}
+          />
+        )}
 
         <div className="content-space">
+          {isAnyFilterApplied && (
+            <h3 className="filters-grid-title">
+              <IoIosSearch
+                style={{ marginRight: "6px", verticalAlign: "middle" }}
+              />
+              Filters
+            </h3>
+          )}
+
           {loading && <Loader />}
           {error && <ErrorState message={error} />}
 

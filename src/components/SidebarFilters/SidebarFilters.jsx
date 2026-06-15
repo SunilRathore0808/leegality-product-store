@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./SidebarFilters.css";
+import { IoIosSearch } from "react-icons/io";
 
 const SidebarFilters = ({
   categories = [],
@@ -51,7 +52,9 @@ const SidebarFilters = ({
   return (
     <aside className="sidebar-filters">
       <div className="sidebar-search-wrapper">
-        <span className="sidebar-search-icon">🔍</span>
+        <span className="sidebar-search-icon">
+          <IoIosSearch />
+        </span>
         <input
           type="text"
           placeholder="Search brand..."
@@ -60,8 +63,6 @@ const SidebarFilters = ({
           className="sidebar-search-input"
         />
       </div>
-
-      <h3 className="filters-main-title">Filters</h3>
 
       {/* Categories Section */}
       <div className="filter-section">
